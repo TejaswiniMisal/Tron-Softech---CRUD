@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Records</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Student Records</h1>
+
+    <div id="message" class="message"></div>
+
+    <form action="/add-student" method="post" id="studentForm" class="studentForm">
+      <input type="hidden" id="studentId" />
+      <div class="form-group">
+        <input type="text" id="urn" placeholder="URN" required />
+        <input type="text" id="name" placeholder="Full Name" required />
+        <input type="number" id="age" placeholder="Age" required />
+        <input type="text" id="course" placeholder="Course 'Example - MCA'" required />
+        <button type="submit" id="submitBtn">Add Student</button>
+      </div>
+    </form>
+
+    <div class="table-container">
+      <table id="studentTable">
+        <thead>
+          <tr>
+            <th>URN</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Student List display -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
